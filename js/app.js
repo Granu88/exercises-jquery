@@ -15,11 +15,20 @@ $(function() {
     $("#helloworld").text('Web Developer' + num)
   });
 
-  console.log($('.list-group-item'))
 
   $(".list-group-item").click(function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
   });
+
+  $("#playVideo").click(function() {
+    $("#video").trigger("play");
+    setTimeout(function () {
+      $("#video").trigger("pause");
+    }, 10000)
+
+  });
+
+
 
 });
