@@ -30,7 +30,7 @@ Démarrer la vidéo quand on clique sur le bouton et mettre en pause 10 secondes
 
 Changer le texte en dessous des tabs quand on clique dessus en fonction du lien.
 
-## 7. Afficher la modal
+## 8. Afficher la modal
 
 Afficher la modal qui a l'id "modal" et la fermer avec la petite croix "X" et le bouton "Close".
 
