@@ -13,11 +13,13 @@ $(function() {
   $("#replacetitle").click(function (){
     var num = Math.floor(Math.random() * 9);
     $("#helloworld").text('Web Developer' + num)
+  });
 
+  console.log($('.list-group-item'))
 
-
-
-
-  })
+  $(".list-group-item").click(function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  });
 
 });
