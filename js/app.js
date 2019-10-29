@@ -2,7 +2,7 @@ $(function() {
   // Here your JS code, good luck !
   $('.dropdown-toggle').dropdown();
 
-  $(".nav-link").removeClass("disabled");
+  $("#navbarSupportedContent .nav-link").removeClass("disabled");
 
   $("#search").keyup(function() {
     var value=$('#search').val();
@@ -11,7 +11,7 @@ $(function() {
 
 
   $("#replacetitle").click(function (){
-    var num = Math.floor(Math.random() * 9);
+    var num = Math.floor(Math.random() * 9); // la variable num se rajoute après le titre
     $("#helloworld").text('Web Developer' + num)
   });
 
@@ -54,5 +54,18 @@ $(function() {
       progressBar.css('width', '100%') //width + 5 + '%'
     }
   }, 1000)
+
+  var isPlayed = true;
+
+  setInterval(function () {
+    if (isPlayed) {
+    $("#spinner").css('animation-play-state', 'paused');
+    isPlayed = false;
+  } else {
+    $("#spinner").css('animation-play-state', 'running');
+    isPlayed = true;
+  }
+}, 5000);
+
 
 });
