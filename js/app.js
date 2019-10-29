@@ -38,7 +38,21 @@ $(function() {
     $("#modal").modal();
   });
 
+  $("#mypopover").click(function(){
+    $(this).popover();
+  });
 
 
+  var progressBar = $("#progressBar");
+
+  setInterval(function () {
+    var width = parseInt(progressBar[0].style.getPropertyValue('width'))
+
+    if (width >= 100) {
+      progressBar.css('width', 0)
+    } else {
+      progressBar.css('width', '100%') //width + 5 + '%'
+    }
+  }, 1000)
 
 });
