@@ -6,10 +6,18 @@ $(function() {
 
   $("#search").keyup(function() {
     var value=$('#search').val();
-  $('span').html(value);
-
-  
-
-    console.log(value)
+    $('span').html(value);
   });
+
+
+  $("#replacetitle").click(function (){
+    var num = Math.floor(Math.random() * 9);
+    $("#helloworld").text('Web Developer' + num)
+
+
+
+
+
+  })
+
 });
